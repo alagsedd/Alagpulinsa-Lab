@@ -1,0 +1,40 @@
+/* styles for 300px */
+.parent {
+    margin: 0.1rem;
+}
+
+.box1 {
+    margin-top: 1rem;
+    /* background-color: rgb(19, 48, 79); */
+}
+/* .header1 {
+    display: flex;
+    justify-content: center;
+} */
+.header1 span {
+    font-weight: 500;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #fff;
+}
+.header2 {
+    display: flex;
+    justify-content: center;
+}
+.header2 span {
+    font-weight: 500;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #fff;
+
+}
+.box1 p {
+    color: #d5e0ef;
+    margin-top: 0.3rem;
+    padding: 0.4rem;
+    border: 1px solid rgb(19, 48, 79);
+}
+
+@media screen and (min-width: 370px) {
+    .header2 span {
+        font-size: 1.6rem;
+    }
+}

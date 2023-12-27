@@ -1,0 +1,62 @@
+.image {
+    filter: contrast(110%);
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    margin-top: 0.3rem;
+}
+.box1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid rgb(19, 48, 79); */
+    margin-bottom: 1rem;
+}
+.box1 p {
+    padding: 0.3rem;
+    border: 1px solid rgb(11, 52, 95);
+}
+.box2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.4rem;
+    margin-bottom: 1rem;
+}
+.box2 p {
+    padding: 0.3rem;
+    border: 1px solid  rgb(19, 48, 79);
+}
+.header2 {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.header2 span {
+    font-weight: 500;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #fff;
+
+}
+.header3 {
+    width: 90%;
+    /* border: 1px solid  rgb(19, 48, 79); */
+    margin: 0.3rem;
+    display: flex;
+    justify-content: flex-start;
+}
+.header3 span{
+    color: aqua;
+}
+
+@media screen and (min-width: 370px) {
+    .brandNameBox span {
+        font-size: 1.8rem;
+    }
+    .image {
+        height: 13rem;
+        width: 18rem;
+    }
+}

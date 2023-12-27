@@ -1,0 +1,16 @@
+.image {
+    filter: contrast(110%);
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+}
+.parent {
+    margin: 0.1rem;
+    /* border: 3px solid #fff; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.swiper {
+    /* border: 3px solid #07e886; */
+}

@@ -1,0 +1,21 @@
+.parent {
+    /* border: 2px solid #fff !important; */
+    display: flex;
+    overflow-x: auto;
+    /* Ensure horizontal scroll */
+  }
+  
+  /* Adjust the cards container for flex layout */
+  .cardsContainer {
+    display: flex;
+    gap: 0.5rem; /* Adjust the gap between cards */
+  }
+  .header1 {
+    display: flex;
+    justify-content: center;
+}
+.header1 span {
+    font-weight: 500;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #fff;
+}

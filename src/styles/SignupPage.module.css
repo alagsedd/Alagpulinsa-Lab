@@ -1,0 +1,32 @@
+.parent {
+    padding: 1rem 0.5rem;
+    border: 1px solid  rgb(48, 64, 79);
+    height: auto;
+}
+.form {}
+.nameBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid  rgb(48, 64, 79);
+}
+.buttonBox {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    /* border: 1px solid  rgb(48, 64, 79); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nameBox p {
+    border-top: 1px solid  rgb(48, 64, 79);
+}
+.name {
+    font-size: 2.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    display: flex;
+
+}

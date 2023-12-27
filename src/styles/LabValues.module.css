@@ -1,0 +1,52 @@
+.parent {
+    /* border-bottom: 1px solid rgb(244, 249, 254);
+    border-top: 1px solid rgb(237, 242, 247); */
+    margin-top: 1rem;
+    color: #d5e0ef;
+    display: flex;
+    gap: 1rem;
+    padding: 0.3rem;
+    /* border: 3px solid rgb(222, 226, 230); */
+    overflow-x: scroll;
+}
+.container {
+    display: flex;
+    gap: 1rem;
+    /* border: 3px solid rgb(35, 103, 171); */
+}
+.box1, .box2, .box3 {
+    padding: 0.6rem;
+    height: 21rem;
+    width: 17rem;
+    border: 1px solid rgb(11, 52, 95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.box1:hover, .box2:hover, .box3:hover {
+    border: 1px solid aqua;
+}
+.header {
+    margin-bottom: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid aqua;
+}
+.header span {
+    margin-left: 0.4rem;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+.ul {
+    padding: 1rem;
+}
+
+@media screen and (min-width: 370px) {
+    .box1, .box2, .box3 {
+        width: 20rem;
+        height: 18rem;
+    }
+}

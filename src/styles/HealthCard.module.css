@@ -1,0 +1,22 @@
+/* styles for screens 300px */
+
+.card {
+    padding: 0.4rem;
+    height: 10rem;
+    width: 15rem;
+    border: 10px;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow:  2px 2px 2px rgb(48, 64, 79) ;
+    align-items: center;
+    border: 1px solid  rgb(48, 64, 79);
+}
+.description {}
+.title {
+    font-weight: 500;
+}
+.link {
+    color: aqua;
+}

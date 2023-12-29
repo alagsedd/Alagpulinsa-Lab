@@ -14,6 +14,7 @@
     margin-bottom: 1rem;
 }
 .box1 p {
+    color: #d5e0ef;
     padding: 0.3rem;
     border: 1px solid rgb(11, 52, 95);
 }
@@ -26,6 +27,7 @@
     margin-bottom: 1rem;
 }
 .box2 p {
+    color: #d5e0ef;
     padding: 0.3rem;
     border: 1px solid  rgb(19, 48, 79);
 }
@@ -58,5 +60,17 @@
     .image {
         height: 13rem;
         width: 18rem;
+    }
+}
+@media screen and (min-width: 370px) {
+    .header2 span {
+        font-size: 1.8rem;
+    }
+    .image {
+        height: 13rem;
+        width: 18rem;
+    }
+    .header3 span {
+        font-size: 1.1rem;
     }
 }

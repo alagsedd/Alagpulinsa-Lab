@@ -1,0 +1,27 @@
+.parent {
+    padding: 0.4rem;
+}
+.child {
+    padding: 0.4rem;
+    border: 1px solid  rgb(11, 52, 95);
+}
+.child p {
+    text-align: center;
+    
+}
+.buttonBox {
+    padding: 0.4rem;
+    border-top: 1px solid  rgb(11, 52, 95);
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+.closeButton {
+    margin-bottom: 0.6rem;
+    border-bottom: 1px solid  rgb(11, 52, 95);
+    display: flex;
+    justify-content: flex-end;
+}
+.icon:hover {
+    cursor: pointer;
+}

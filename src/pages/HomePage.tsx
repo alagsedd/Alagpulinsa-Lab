@@ -1,13 +1,13 @@
+import Footer from "../components/Footer";
 import HomeBody from "../components/HomeBody";
-import LabValues from "../components/LabValues";
 import Slider from "../components/Slider";
 
 const HomePage = () => {
   return (
     <>
       <Slider />
-      <LabValues />
       <HomeBody />
+      <Footer />
     </>
   );
 };

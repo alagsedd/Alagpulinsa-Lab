@@ -1,0 +1,32 @@
+.parent {
+    margin: 0.3rem;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+}
+.header span {
+    border-bottom: 1px solid #fff;
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+}
+.usersBox, .messagesBox {
+    margin-bottom: 1rem;
+    display: flex;
+    align-self: center;
+    border: 1px solid rgb(11, 52, 95);
+    padding: 1rem;
+}
+.usersBox:hover, .messagesBox:hover {
+    background-color: rgb(11, 52, 95);
+}
+.usersBox p, .messagesBox p {
+    padding-left: 0.5rem;
+    font-size: 1.1rem;
+    border-left: 1px solid rgb(11, 52, 95);
+}
+.icon {
+    margin-right: 0.5rem;
+}
+.messagesBox {}

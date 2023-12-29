@@ -9,7 +9,12 @@
     justify-content: space-between;
 }
 .link {
+    display: flex;
+    align-items: center;
     text-decoration: none;
+}
+.icon {
+    margin-right: 0.2rem;
 }
 .horizonNav {
     display: none;
@@ -20,10 +25,13 @@
     flex-direction: column;
     margin: 0.3rem;
     padding: 0.3rem;
-    background-color: rgb(11, 52, 95);
+    border: 1px solid rgb(11, 52, 95);
 }
 .verticalNav li {
-    border: 1px solid #1b202d;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(11, 52, 95);
     padding: 0.3rem;
     margin-bottom: 0.3rem;
 }
@@ -32,7 +40,7 @@
 }
 .verticalNav li:hover {
     cursor: pointer;
-    border: 1px solid rgb(0, 200, 255);
+    background-color: rgb(11, 52, 95);
 }
 .logo {
     object-fit: cover;
@@ -42,7 +50,7 @@
 .brandNameBox span {
     font-size: 1.3rem;
     font-weight: 500;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .menu:hover {
     cursor: pointer;

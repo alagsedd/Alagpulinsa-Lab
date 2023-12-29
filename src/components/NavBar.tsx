@@ -3,16 +3,25 @@ import styles from "../styles/NavBar.module.css";
 import { IoIosCloseCircle } from "react-icons/io";
 import { TiThMenu } from "react-icons/ti";
 import { Link } from "react-router-dom";
-// import SwitchPopOver from "./SwitchPopOver";
+import { IoIosHome } from "react-icons/io";
+import { RiTeamLine } from "react-icons/ri";
+import { MdHealthAndSafety } from "react-icons/md";
+import { MdContacts } from "react-icons/md";
+import { FaAmazonPay } from "react-icons/fa6";
+import { RiAdminLine } from "react-icons/ri";
+import { LuSmilePlus } from "react-icons/lu";
+import { auth } from "../Firebase/FirebaseConfig";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
+  const [user] = useAuthState(auth);
   return (
     <>
       <nav className={styles.nav}>
         <div className={styles.brandNameBox}>
-          <span>Alagpulinsa Labs</span>
+          <span>A-Labs</span>
         </div>
         <ul className={styles.horizonNav}>
           <li>Our Company</li>
@@ -41,19 +50,42 @@ const NavBar = () => {
       {showMenu && (
         <ul className={styles.verticalNav}>
           <li>
-            <Link to={"/"}>Home</Link>
+            <Link className={styles.link} to={"/"}>
+              <IoIosHome className={styles.icon} />
+              Home
+            </Link>
           </li>
-          <li>Our Company</li>
-
-          <li>Health Tips</li>
           <li>
-            <Link to={"sign-up"}>Sign up</Link>
+            <RiTeamLine className={styles.icon} />
+            Our Company
           </li>
-          <li>Contact Us</li>
-          <li>Pay your bill Online</li>
+
+          <li>
+            <MdHealthAndSafety className={styles.icon} />
+            Health Tips
+          </li>
+          <li>
+            {!user ? (
+              <Link className={styles.link} to={"sign-up"}>
+                {" "}
+                <LuSmilePlus className={styles.icon} />
+                Sign up/Log in
+              </Link>
+            ) : (
+              <Link to={"log-out"}>Log out</Link>
+            )}
+          </li>
+          <li>
+            <MdContacts className={styles.icon} />
+            Contact Us
+          </li>
+          <li>
+            <FaAmazonPay className={styles.icon} />
+            Pay your bill Online
+          </li>
           <li>
             <Link className={styles.link} to={"/admin"}>
-              Log in as Admin
+              <RiAdminLine className={styles.icon} /> Log in as Admin
             </Link>
           </li>
         </ul>

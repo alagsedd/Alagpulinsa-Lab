@@ -1,0 +1,48 @@
+.parent {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color:  rgb(25, 40, 55);
+    height: auto;
+}
+.child1 {
+    border: 1px solid #2f4042;
+    padding: 0.3rem;
+}
+.child1 ul  {
+    padding: 0.4rem 1.5rem;
+}
+.child1 span {
+    color: aqua;
+}
+.header {
+    display: flex;
+    justify-content: center;
+}
+.child {
+    padding: 0.3rem;
+    margin-top: 0.5rem;
+    border: 1px solid #2f4042;
+}
+.child p {
+    margin-bottom: 0.3rem;
+}
+.success {
+    border-radius: 5px;
+    margin-top: 0.4rem;
+    padding: 0.5rem;
+     background-color: #2f4042;
+}
+.icon {
+    margin-right: 0.3rem;
+}
+.inner {
+    display: flex;
+    align-items: center;
+}
+.close {
+    margin-left: 90%;
+}
+.name {
+    font-weight: 500;
+    font-size: 1.5rem;
+}

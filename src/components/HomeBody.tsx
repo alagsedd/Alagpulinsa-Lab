@@ -22,9 +22,7 @@ const HomeBody = () => {
           </p>
         </div>
 
-        <div className="box2">
-          <Reason />
-        </div>
+        <Reason />
 
         <HealthTips />
       </div>

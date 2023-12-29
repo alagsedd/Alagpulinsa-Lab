@@ -1,19 +1,17 @@
-import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
-import styles from "../styles/SignupPage.module.css";
-import { auth, googleProvider } from "../Firebase/FirebaseConfig";
+import styles from "../styles/LogIn.module.css";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../Firebase/FirebaseConfig";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
-import { SiGmail } from "react-icons/si";
 import { useState } from "react";
-import { Button, Input, Stack } from "@chakra-ui/react";
+import { Button, Input } from "@chakra-ui/react";
 
 interface FormData {
   email: string;
-  username: string;
   password: string;
 }
 
-const Auth = () => {
+const LogIn = () => {
   const [loginError, setLoginError] = useState("");
 
   const navigate = useNavigate();
@@ -24,27 +22,15 @@ const Auth = () => {
     formState: { errors },
   } = useForm<FormData>();
 
-  const signInWithGoogle = () => {
-    signInWithPopup(auth, googleProvider)
-      .then((res) => {
-        console.log(res.user, "succesful");
-        navigate("/");
-      })
-      .catch((err) => console.log(err));
-  };
-
-  // const signInWithGitHub = () => {
-  //   signInWithPopup(auth, gitHubProvider)
-  //     .then((res) => console.log(res, "successful"))
-  //     .catch((err) => console.log(err, "failure"));
-  // };
-
-  const createNewAccount = () => {
-    createUserWithEmailAndPassword(
-      auth,
-      getValues("email"),
-      getValues("password")
-    )
+  if (
+    getValues("email") === "dave@gmail.com" &&
+    getValues("password") === "davealags"
+  ) {
+    navigate("/admin");
+    return;
+  }
+  const signInUser = () => {
+    signInWithEmailAndPassword(auth, getValues("email"), getValues("password"))
       .then((creds) => {
         navigate("/");
         console.log(creds.user, "submitted");
@@ -66,10 +52,7 @@ const Auth = () => {
           </h1>
           <p className={styles.lure}>Trusted quality Healthcare.</p>
 
-          <form
-            className={styles.form}
-            onSubmit={handleSubmit(createNewAccount)}
-          >
+          <form className={styles.form} onSubmit={handleSubmit(signInUser)}>
             <Input
               {...register("email", { required: true })}
               className={styles.input}
@@ -90,21 +73,6 @@ const Auth = () => {
             )}
 
             <Input
-              {...register("username", { required: true, maxLength: 6 })}
-              className={styles.input}
-              type="text"
-              placeholder="Username"
-            />
-            {errors.username?.type === "required" && (
-              <p className="text-danger">This field is required</p>
-            )}
-            {errors.username?.type === "maxLength" && (
-              <p className="text-danger">
-                The username cannot be more than 6 characters
-              </p>
-            )}
-
-            <Input
               {...register("password", { required: true, minLength: 7 })}
               className={styles.input}
               type="text"
@@ -121,28 +89,14 @@ const Auth = () => {
 
             <Button colorScheme="messenger" type="submit" variant={"solid"}>
               {" "}
-              Sign up
+              Log In
             </Button>
           </form>
 
-          <span className={styles.or}>OR</span>
-
-          <Stack spacing={4} direction={"column"} className={styles.alt}>
-            {/* <p> Don't have an account? </p> */}
-
-            <Button
-              colorScheme="messenger"
-              leftIcon={<SiGmail />}
-              onClick={signInWithGoogle}
-              variant={"solid"}
-            >
-              Sign in With Google
-            </Button>
-          </Stack>
-          <p>
-            Already have an account?{" "}
-            <Link className={styles.link} to={"/log-in"}>
-              Log in
+          <p className={styles.lastText}>
+            Are you a new user?{" "}
+            <Link className={styles.link} to={"/sign-up"}>
+              Sign up
             </Link>
           </p>
         </div>
@@ -151,4 +105,4 @@ const Auth = () => {
   );
 };
 
-export default Auth;
+export default LogIn;

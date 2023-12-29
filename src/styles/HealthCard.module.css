@@ -15,6 +15,7 @@
 }
 .description {}
 .title {
+    color: #d5e0ef;
     font-weight: 500;
 }
 .link {

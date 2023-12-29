@@ -14,3 +14,9 @@
 .swiper {
     /* border: 3px solid #07e886; */
 }
+
+@media screen and (min-width: 470px) {
+    .image {
+        height: 18rem;
+    }
+}

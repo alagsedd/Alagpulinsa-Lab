@@ -1,4 +1,4 @@
-import { Button, Stack, Textarea } from "@chakra-ui/react";
+import { Button, Stack, Textarea, useColorMode } from "@chakra-ui/react";
 import styles from "../styles/Footer.module.css";
 import { useState } from "react";
 import { MdVerified } from "react-icons/md";
@@ -10,6 +10,7 @@ const Footer = () => {
   const [submit, setSubmit] = useState(false);
   const [message, setMessage] = useState("");
 
+  const { colorMode } = useColorMode();
   const commentsDBRef = collection(database, "comments");
 
   const handleSubmission = (e: React.FormEvent<HTMLFormElement>) => {
@@ -23,11 +24,19 @@ const Footer = () => {
       setMessage("");
     }
   };
+
+  const backgroundStyle = colorMode === "dark" ? "#1a202c" : "#e9ecec";
+  const spanColor = colorMode === "light" ? "#0d5f79" : "#fff";
+  const borderStyle =
+    colorMode === "dark" ? "1px solid rgb(19, 48, 79)" : "none";
+
   return (
-    <div className={styles.parent}>
-      <div className={styles.child1}>
+    <div style={{ backgroundColor: backgroundStyle }} className={styles.parent}>
+      <div style={{ border: borderStyle }} className={styles.child1}>
         <h3 className={styles.header}>
-          <span className={styles.name}>A-Labs</span>
+          <span style={{ color: spanColor }} className={styles.name}>
+            A-Labs
+          </span>
         </h3>
         <p>For more info, visit us call us on</p>
         <ul>
@@ -35,7 +44,8 @@ const Footer = () => {
           <li>03394030303</li>
         </ul>
       </div>
-      <div className={styles.child}>
+
+      <div style={{ border: borderStyle }} className={styles.child}>
         <p> Leave a message</p>
 
         <form onSubmit={handleSubmission}>

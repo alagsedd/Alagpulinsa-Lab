@@ -5,13 +5,18 @@ const ColorModeSwitch = () => {
 
   return (
     <>
-      <Stack align={"center"} direction={"row"}>
+      <Stack
+        m={1}
+        align={"center"}
+        justifyContent={"flex-end"}
+        direction={"row"}
+      >
         <Switch
           isChecked={colorMode === "dark"}
           onChange={toggleColorMode}
           size="md"
         />
-        <Text>Dark </Text>
+        <Text>Dark mode </Text>
       </Stack>
     </>
   );

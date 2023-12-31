@@ -14,9 +14,10 @@
     margin-bottom: 1rem;
 }
 .box1 p {
+    border-radius: 5px;
     color: #d5e0ef;
     padding: 0.3rem;
-    border: 1px solid rgb(11, 52, 95);
+    /* border: 1px solid rgb(11, 52, 95); */
 }
 .box2 {
     display: flex;
@@ -27,9 +28,10 @@
     margin-bottom: 1rem;
 }
 .box2 p {
+    border-radius: 5px;
     color: #d5e0ef;
     padding: 0.3rem;
-    border: 1px solid  rgb(19, 48, 79);
+    /* border: 1px solid  rgb(19, 48, 79); */
 }
 .header2 {
     margin-top: 1rem;

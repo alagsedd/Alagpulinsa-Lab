@@ -9,13 +9,20 @@ import s3 from "../assets/sliders/slide3.jpg";
 import s4 from "../assets/sliders/slide4.jpg";
 import s6 from "../assets/sliders/slide6.jpeg";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Slider = () => {
   const images = [s1, s6, s2, s3, s4];
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
-      <div className={styles.parent}>
+      <div data-aos="fade-right" className={styles.parent}>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           className={styles.swiper}

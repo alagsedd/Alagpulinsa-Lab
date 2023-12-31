@@ -33,12 +33,6 @@ const Auth = () => {
       .catch((err) => console.log(err));
   };
 
-  // const signInWithGitHub = () => {
-  //   signInWithPopup(auth, gitHubProvider)
-  //     .then((res) => console.log(res, "successful"))
-  //     .catch((err) => console.log(err, "failure"));
-  // };
-
   const createNewAccount = () => {
     createUserWithEmailAndPassword(
       auth,

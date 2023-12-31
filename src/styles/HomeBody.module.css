@@ -14,7 +14,7 @@
 .header1 span {
     font-weight: 500;
     font-size: 1.4rem;
-    border-bottom: 1px solid #fff;
+    /* border-bottom: 1px solid #fff; */
 }
 .header2 {
     display: flex;
@@ -27,10 +27,10 @@
 
 }
 .box1 p {
+    border-radius: 5px;
     color: #d5e0ef;
     margin-top: 0.3rem;
     padding: 0.4rem;
-    border: 1px solid rgb(19, 48, 79);
 }
 
 @media screen and (min-width: 370px) {

@@ -22,18 +22,18 @@ const LogIn = () => {
     formState: { errors },
   } = useForm<FormData>();
 
-  if (
-    getValues("email") === "dave@gmail.com" &&
-    getValues("password") === "davealags"
-  ) {
-    navigate("/admin");
-    return;
-  }
   const signInUser = () => {
     signInWithEmailAndPassword(auth, getValues("email"), getValues("password"))
       .then((creds) => {
-        navigate("/");
-        console.log(creds.user, "submitted");
+        if (
+          getValues("email") === "dave@gmail.com" &&
+          getValues("password") === "davealags"
+        ) {
+          navigate("/admin");
+        } else {
+          navigate("/");
+          console.log(creds.user, "submitted");
+        }
       })
       .catch((err) => {
         if (err.code === "auth/email-already-in-use") {

@@ -12,17 +12,26 @@ import { RiAdminLine } from "react-icons/ri";
 import { LuSmilePlus } from "react-icons/lu";
 import { auth } from "../Firebase/FirebaseConfig";
 import { useAuthState } from "react-firebase-hooks/auth";
+import ColorModeSwitch from "../chakraUI/ColorModeSwitch";
+import { useColorMode } from "@chakra-ui/react";
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const { colorMode } = useColorMode();
 
   const [user] = useAuthState(auth);
+
   return (
     <>
       <nav className={styles.nav}>
         <div className={styles.brandNameBox}>
-          <span>A-Labs</span>
+          <span
+            style={{ color: `${colorMode === "light" ? "#0d5f79" : "#fff"}` }}
+          >
+            Alagpulinsa Labs
+          </span>
         </div>
+
         <ul className={styles.horizonNav}>
           <li>Our Company</li>
           <li>Our Products</li>
@@ -48,7 +57,10 @@ const NavBar = () => {
       </nav>
 
       {showMenu && (
-        <ul className={styles.verticalNav}>
+        <ul
+          style={{ color: `${colorMode === "light" ? "#12947a" : "#fff"}` }}
+          className={styles.verticalNav}
+        >
           <li>
             <Link className={styles.link} to={"/"}>
               <IoIosHome className={styles.icon} />
@@ -90,6 +102,8 @@ const NavBar = () => {
           </li>
         </ul>
       )}
+
+      <ColorModeSwitch />
     </>
   );
 };

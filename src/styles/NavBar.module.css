@@ -3,7 +3,7 @@
     border-radius: 3px;
     margin: 0.2rem;
     padding: 0.3rem;
-    background-color: rgb(11, 52, 95);
+    /* background-color: rgb(11, 52, 95); */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -48,7 +48,7 @@
     width: 8rem;
 }
 .brandNameBox span {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-weight: 500;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }

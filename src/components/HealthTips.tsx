@@ -1,7 +1,9 @@
+import { useColorMode } from "@chakra-ui/react";
 import HealthCard from "../cards/HealthCard";
 import styles from "../styles/HealthTips.module.css";
 
 const HealthTips = () => {
+  const { colorMode } = useColorMode();
   const healthTips = [
     {
       id: 1,
@@ -32,7 +34,11 @@ const HealthTips = () => {
   return (
     <>
       <h1 className={styles.header1}>
-        <span>Be well and stay healthy</span>
+        <span
+          style={{ color: `${colorMode === "light" ? "#0d5f79" : "#fff"}` }}
+        >
+          Be well and stay healthy
+        </span>
       </h1>
       <div className={styles.parent}>
         <div className={styles.cardsContainer}>
